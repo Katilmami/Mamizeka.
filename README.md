@@ -6,7 +6,7 @@
 ##### Mami Zeka Termux
 
 
-Mami Tool Termux
+Mami Zeka Termux
 
 
 
