@@ -13,7 +13,8 @@ print("")
 os.system("figlet Mami Zeka")
 print("Çıkmak için exit yazın")
 degiskenler = {
-    "wifiyi aç": "Kapatıyorum",
+    "wifiyi aç": "Açıyorum izin isterse izin verin",
+    "sesi aç": "Sesi Fulledim",
 }
 def degisken_kodu(kelime):
     print(degiskenler[kelime])
@@ -48,7 +49,17 @@ while True:
         yeni_deger = ""
     elif kullanici_girisi == 'wifiyi aç':
         os.system("termux-wifi-enable true")
-        
+        print("Açıyorum izin isterse izin verin")
+        os.system("termux-tts-speak Açıyorum")
+    elif kullanici_girisi == 'wifiyi aç':
+        os.system("rm -rf sc.txt")
+        os.system("wget ")
+        print("Güncelliyorum")
+        os.system("termux-tts-speak Güncelliyorum")
+    elif kullanici_girisi == 'sesi aç':
+        os.system("termux-volume music 15")
+        print("Açıyorum")
+        os.system("termux-tts-speak Açıyorum")
     elif kullanici_girisi == 'kodbit':
         degiskenler[yeni_degisken] = yeni_kod
         degiskenler[yeni_degisken] = yeni_deger
