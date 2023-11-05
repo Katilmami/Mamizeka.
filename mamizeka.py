@@ -15,6 +15,7 @@ print("Çıkmak için exit yazın")
 degiskenler = {
     "wifiyi aç": "Açıyorum izin isterse izin verin",
     "sesi aç": "Sesi Fulledim",
+    "kendini güncelle": "güncelledim",
 }
 def degisken_kodu(kelime):
     print(degiskenler[kelime])
@@ -51,9 +52,10 @@ while True:
         os.system("termux-wifi-enable true")
         print("Açıyorum izin isterse izin verin")
         os.system("termux-tts-speak Açıyorum")
-    elif kullanici_girisi == 'wifiyi aç':
+    elif kullanici_girisi == 'kendini güncelle':
         os.system("rm -rf sc.txt")
-        os.system("wget ")
+        os.system("wget https://raw.githubusercontent.com/Katilmami/Mamizeka./main/sc.txt")
+        os.system("clear")
         print("Güncelliyorum")
         os.system("termux-tts-speak Güncelliyorum")
     elif kullanici_girisi == 'sesi aç':
